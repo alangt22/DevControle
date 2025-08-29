@@ -1,1 +1,15 @@
 @import "tailwindcss";
+@import "nprogress/nprogress.css";
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  @apply bg-orange-500 fixed top-0 left-0 w-full h-1 z-[9999];
+  transition: width 0.2s ease-in-out, opacity 0.4s ease;
+}
+
+#nprogress .spinner {
+  display: none;
+}
+

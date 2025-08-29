@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { AuthProvider } from "@/providers/auth";
 import { ModalProvider } from "@/providers/modal";
 import { Toaster } from "react-hot-toast";
+import { RouteLoader } from "@/components/routeloader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <AuthProvider>
           <ModalProvider>
             <Header />
+            <RouteLoader />
             {children}
             <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
           </ModalProvider>
